@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
 import { RootState } from '../../store'
 import { remover } from '../../store/reducers/carrinhoSlice'
 import lixeiraImg from '../../assets/images/lixeira.png'

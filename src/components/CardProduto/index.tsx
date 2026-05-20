@@ -1,15 +1,16 @@
 import * as S from './styles'
 
 type Props = {
+  key: string
   nome: string
   descricao: string
   imagem: string
   onClick: () => void
 }
 
-const CardProduto = ({ nome, descricao, imagem, onClick }: Props) => {
+const CardProduto = ({ key, nome, descricao, imagem, onClick }: Props) => {
   return (
-    <S.Card>
+    <S.Card key={key}>
       <S.Imagem src={imagem} alt={nome} />
       <S.Info>
         <S.Nome>{nome}</S.Nome>

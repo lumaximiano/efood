@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/Theme'
+import { breakpoints } from '../../styles/breakpoints'
 
 export const HeroContainer = styled.div`
   position: relative;
@@ -42,6 +43,7 @@ export const RestaurantesLink = styled.span`
 export const LogoImg = styled.img`
   width: 125px;
   height: 60px;
+  object-fit: contain;
 `
 
 export const CarrinhoInfo = styled.span`
@@ -93,11 +95,11 @@ export const Grid = styled.div`
   gap: 32px;
   margin: 56px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.tablet}px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     grid-template-columns: 1fr;
   }
 `

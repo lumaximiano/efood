@@ -17,3 +17,19 @@ export const fetchRestaurantes = async () => {
     throw error
   }
 }
+
+export const checkout = async (pedidoData: any) => {
+  const response = await fetch('https://api-ebac.vercel.app/api/efood/checkout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(pedidoData)
+  })
+  
+  if (!response.ok) {
+    throw new Error('Erro ao finalizar pedido')
+  }
+  
+  return response.json()
+}

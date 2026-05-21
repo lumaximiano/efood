@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/Theme'
+import { breakpoints } from '../../styles/breakpoints'
 
 export const Card = styled.div`
   background: ${theme.colors.white};
@@ -8,7 +9,8 @@ export const Card = styled.div`
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s;
-  width: 472px;
+  width: 100%;
+  max-width: 472px;
 
   &:hover {
     transform: translateY(-4px);
@@ -34,6 +36,12 @@ export const TagsContainer = styled.div`
   right: 12px;
   display: flex;
   gap: 8px;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    top: 8px;
+    right: 8px;
+    gap: 4px;
+  }
 `
 
 export const TagDestaque = styled.span`
@@ -46,6 +54,12 @@ export const TagDestaque = styled.span`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    width: 100px;
+    height: 22px;
+    font-size: 10px;
+  }
 `
 
 export const TagTipo = styled.span`
@@ -58,6 +72,12 @@ export const TagTipo = styled.span`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    width: 50px;
+    height: 22px;
+    font-size: 10px;
+  }
 `
 
 export const Info = styled.div`
@@ -75,6 +95,10 @@ export const Nome = styled.h3`
   font-size: 18px;
   font-weight: bold;
   color: ${theme.colors.primary};
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    font-size: 14px;
+  }
 `
 
 export const Nota = styled.div`
@@ -84,11 +108,20 @@ export const Nota = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    font-size: 14px;
+  }
 `
 
 export const StarIcon = styled.img`
   width: 21px;          
   height: 20px;         
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    width: 16px;
+    height: 15px;
+  }
 `
 
 export const Descricao = styled.p`
@@ -97,6 +130,12 @@ export const Descricao = styled.p`
   line-height: 1.4;
   margin-top: 20px;
   margin-bottom: 16px;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    font-size: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
 `
 
 export const Botao = styled.button`
@@ -112,6 +151,12 @@ export const Botao = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    width: 70px;
+    height: 22px;
+    font-size: 10px;
+  }
 
   &:hover {
     background-color: #c55555;

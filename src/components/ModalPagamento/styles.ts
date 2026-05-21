@@ -25,7 +25,7 @@ export const Modal = styled.div`
   align-items: center;
 `
 
-export const Form = styled(ContainerModal)`
+export const Form = styled(ContainerModal).attrs({ as: 'form' })`
   display: flex;
   flex-direction: column;
 `
@@ -118,4 +118,11 @@ export const ButtonVoltar = styled.button`
   &:hover {
     opacity: 0.8;
   }
+`
+
+export const Error = styled.span`
+  color: ${theme.colors.error};
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
 `
